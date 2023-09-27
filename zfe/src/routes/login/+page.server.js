@@ -1,7 +1,5 @@
-import { error, redirect, fail } from '@sveltejs/kit';
-import PocketBase from 'pocketbase';
-
-const pb = new PocketBase('http://127.0.0.1:8090');
+import { redirect, fail } from '@sveltejs/kit';
+import { SESSION_COOKIE_KEY, is_session_valid, pb } from '$lib/server/auth'
 
 export const actions = {
 	default: async ({ cookies, url, request }) => {
@@ -14,22 +12,24 @@ export const actions = {
 			// const authData = await pb.collection("users").authWithPassword(data.get("email"), data.get("password"));
 			console.log(authData);
 
-			console.log(pb.authStore.isValid);
-			console.log(pb.authStore.token);
-			console.log(pb.authStore.model.id);
+			// TODO use sesion key to strore cookies server side
+			// let sessionKey = crypto.randomBytes(32).toString("hex")
+			// let token = pb.authStore.token
+			// console.log(sessionKey, ": ", token)
+
+			let cookie = pb.authStore.exportToCookie()
+			cookies.set(SESSION_COOKIE_KEY, cookie);
 
 		} catch (error) {
 			console.log(error);
-			return fail(400, { description: "Error while authenticating" })
+			return fail(403, { description: "Authentication Error" })
 		}
 
-		if (pb.authStore.isValid) {
-			cookies.set('logged_in', 'true', { path: '/' });
-			cookies.set('toky', pb.authStore.token, { path: '/' });
+		if (is_session_valid(cookies.get(SESSION_COOKIE_KEY))) {
 			throw redirect(303, url.searchParams.get('redirectTo') ?? '/');
 		}
 
 		return fail(403, { description: "Unauthorized" })
-
 	}
+
 };
