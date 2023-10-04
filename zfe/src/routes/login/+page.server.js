@@ -5,8 +5,8 @@ export const actions = {
 	default: async ({ cookies, url, request }) => {
 
 		const data = await request.formData();
-		
-	try {
+
+		try {
 
 			const authData = await pb.admins.authWithPassword(data.get("email"), data.get("password"));
 			// const authData = await pb.collection("users").authWithPassword(data.get("email"), data.get("password"));
