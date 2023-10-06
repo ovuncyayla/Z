@@ -15,6 +15,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
+		"@types/node": "^20.8.2",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
@@ -33,6 +34,8 @@
 		"grapesjs-blocks-basic": "^1.0.2",
 		"grapesjs-component-countdown": "^1.0.2",
 		"grapesjs-custom-code": "^1.0.2",
+		"grapesjs-lory-slider": "^0.1.5",
+		"grapesjs-navbar": "^1.0.2",
 		"grapesjs-parser-postcss": "^1.0.1",
 		"grapesjs-plugin-export": "^1.0.12",
 		"grapesjs-plugin-forms": "^2.0.6",
