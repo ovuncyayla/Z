@@ -10,20 +10,7 @@
 	<!-- 	rel="stylesheet" -->
 	<!-- 	href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" -->
 	<!-- /> -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
-        }
-      }
-    }
-  </script>
-
-	<link rel="stylesheet" href="//unpkg.com/grapesjs/dist/css/grapes.min.css" />
+	<!-- <link rel="stylesheet" href="//unpkg.com/grapesjs/dist/css/grapes.min.css" /> -->
 	<!-- <link rel="stylesheet" href="https://studio.grapesjs.com/static/css/main.967a41b9.css" /> -->
 	<!-- <link rel="stylesheet" href="https://grapesjs.com/stylesheets/grapesjs-preset-webpage.min.css" /> -->
 	<!-- <link rel="stylesheet" href="https://grapesjs.com/stylesheets/demos.css" /> -->
