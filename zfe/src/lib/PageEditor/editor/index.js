@@ -1,14 +1,15 @@
 import 'grapesjs/dist/css/grapes.min.css'
 // import 'grapesjs/dist/grapes.mjs'
 
+
 import { default as grapesjs } from 'grapesjs';
 import grapesjsBlocksBasic from 'grapesjs-blocks-basic';
 import grapesjsPluginForms from 'grapesjs-plugin-forms';
 import grapesjsComponentCountdown from 'grapesjs-component-countdown';
 import grapesjsPluginExport from 'grapesjs-plugin-export';
-import grapesjsTabs from 'grapesjs-tabs';
+// import grapesjsTabs from 'grapesjs-tabs'; // TODO Import on mount
 import grapesjsCustomCode from 'grapesjs-custom-code';
-import grapesjsTouch from 'grapesjs-touch';
+// import grapesjsTouch from 'grapesjs-touch'; // TODO Import on mount
 import grapesjsParserPostcss from 'grapesjs-parser-postcss';
 import grapesjsTooltip from 'grapesjs-tooltip';
 import grapesjsTuiImageEditor from 'grapesjs-tui-image-editor';

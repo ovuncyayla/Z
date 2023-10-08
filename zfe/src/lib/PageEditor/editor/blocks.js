@@ -11,5 +11,5 @@ export function blocks(editor) {
 	let cmd = Commands;
 	console.log(cmd.getAll())
 
-	cmd.run("export-template")
+	// cmd.run("export-template")
 }
