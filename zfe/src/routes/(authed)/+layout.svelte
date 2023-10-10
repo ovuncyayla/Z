@@ -1,37 +1,5 @@
 <script>
-	import { theme } from '$lib/client/store.js';
-
-	let themes = [
-		'light',
-		'dark',
-		'cupcake',
-		'bumblebee',
-		'emerald',
-		'corporate',
-		'synthwave',
-		'retro',
-		'cyberpunk',
-		'valentine',
-		'halloween',
-		'garden',
-		'forest',
-		'aqua',
-		'lofi',
-		'pastel',
-		'fantasy',
-		'wireframe',
-		'black',
-		'luxury',
-		'dracula',
-		'cmyk',
-		'autumn',
-		'business',
-		'acid',
-		'lemonade',
-		'night',
-		'coffee',
-		'winter'
-	];
+	import ThemeSwitcher from "$lib/components/ThemeSwitcher.svelte";	
 </script>
 
 <svelte:head>
@@ -42,11 +10,7 @@
 </svelte:head>
 
 <div>
-	<select bind:value={$theme}>
-		#{#each themes as t, i}
-			<option value={t}>{t} </option>
-		{/each}
-	</select>
+	<ThemeSwitcher />
 
 	<div class="drawer">
 		<input id="my-drawer" type="checkbox" class="drawer-toggle" />
@@ -55,6 +19,26 @@
 			<label for="my-drawer" class="btn btn-primary p-5 drawer-button">Open drawer</label>
 			<!-- Page Content -->
 			<slot />
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 262.9999999999998 725" width="262.9999999999998" height="725">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style class="style-fonts">
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://excalidraw.com/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://excalidraw.com/Cascadia.woff2");
+      }
+    </style>
+    
+  </defs>
+  <rect x="0" y="0" width="262.9999999999998" height="725" fill="#f5faff"></rect><g stroke-linecap="round" transform="translate(10 10) rotate(0 121.49999999999989 352.5)"><path d="M32 0 M32 0 C68.4 0.1, 108.07 -2.22, 211 0 M32 0 C95.6 1.73, 158.71 1.68, 211 0 M211 0 C231.85 -1.58, 243.78 8.87, 243 32 M211 0 C233.77 -0.28, 242.36 9.4, 243 32 M243 32 C241.71 177.04, 241.84 321.44, 243 673 M243 32 C242.74 264.83, 242.97 497.44, 243 673 M243 673 C243.38 693.71, 231.41 704.82, 211 705 M243 673 C244.52 695.21, 234.53 706.87, 211 705 M211 705 C167.14 707.03, 122.39 706.33, 32 705 M211 705 C161.94 704.37, 111.04 704.52, 32 705 M32 705 C9.18 706.2, 1.81 693.02, 0 673 M32 705 C8.37 703.12, 2.01 695.14, 0 673 M0 673 C0.45 489.16, 0.85 306.2, 0 32 M0 673 C1.74 484.99, 1.56 297.2, 0 32 M0 32 C0.31 10.6, 11.13 0.45, 32 0 M0 32 C1.22 12.5, 8.59 0.39, 32 0" stroke="#1e1e1e" stroke-width="1" fill="none"></path></g></svg>
+
+
 		</div>
 		<div class="drawer-side">
 			<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay" />
@@ -90,38 +74,6 @@
 						</div>
 					</div>
 				</div>
-
-				<svg
-					version="1.1"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 1024 75"
-					width="1024"
-					height="75"
-				>
-					<!-- svg-source:excalidraw -->
-					<defs>
-						<style class="style-fonts">
-							@font-face {
-								font-family: 'Virgil';
-								src: url('https://excalidraw.com/Virgil.woff2');
-							}
-							@font-face {
-								font-family: 'Cascadia';
-								src: url('https://excalidraw.com/Cascadia.woff2');
-							}
-						</style>
-					</defs>
-					<rect x="0" y="0" width="1024" height="75" fill="#f5faff" /><g
-						stroke-linecap="round"
-						transform="translate(10 10) rotate(0 502 27.5)"
-						><path
-							d="M13.75 0 M13.75 0 C278.65 -3.57, 542.36 -3.96, 990.25 0 M13.75 0 C250.78 3.19, 487.5 2.84, 990.25 0 M990.25 0 C999.59 -0.97, 1003.45 6.33, 1004 13.75 M990.25 0 C999.94 0.77, 1003.58 6.02, 1004 13.75 M1004 13.75 C1004.96 23.74, 1001.85 30.6, 1004 41.25 M1004 13.75 C1003.94 21.79, 1004.72 30.12, 1004 41.25 M1004 41.25 C1003.42 49.62, 998.95 55.27, 990.25 55 M1004 41.25 C1004.13 50.88, 1000.95 55.29, 990.25 55 M990.25 55 C745.65 55.92, 502.41 55.51, 13.75 55 M990.25 55 C765.16 56.43, 539.74 56.82, 13.75 55 M13.75 55 C4.83 53.3, 1.76 52, 0 41.25 M13.75 55 C3.77 53.78, -1.94 52.29, 0 41.25 M0 41.25 C0.84 34.97, -0.16 29.48, 0 13.75 M0 41.25 C0.48 32.71, 0.77 23.12, 0 13.75 M0 13.75 C-0.04 6.41, 5.02 -0.2, 13.75 0 M0 13.75 C0.58 3.23, 2.84 -2.08, 13.75 0"
-							stroke="#1e1e1e"
-							stroke-width="1"
-							fill="none"
-						/></g
-					></svg
-				>
 
 				<label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
 			</ul>
