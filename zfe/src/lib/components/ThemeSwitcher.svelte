@@ -34,8 +34,22 @@ import { theme } from '$lib/client/store.js';
 	];
 </script>
 
-<select class="select select-bordered w-full max-w-xs"  bind:value={$theme}>
+<select class=""  bind:value={$theme}>
 	#{#each themes as t, i}
 		<option value={t}>{t} </option>
 	{/each}
 </select>
+
+<style>
+  select {
+    @apply select;
+    @apply select-bordered;
+    @apply max-w-xs;
+    font-family: Virgil;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    scrollbar-width: 1px;
+  }
+
+</style>

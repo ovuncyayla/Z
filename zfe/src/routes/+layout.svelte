@@ -37,4 +37,12 @@
 		src: url('/fonts/AbrilFatface.ttf');
 		font-display: swap;
 	}
+	@font-face {
+		font-family: 'Virgil';
+		src: url('/fonts/Virgil.woff2');
+	}
+	@font-face {
+		font-family: 'Cascadia';
+		src: url('/fonts/Cascadia.woff2');
+	}
 </style>
